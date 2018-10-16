@@ -28,13 +28,6 @@ const list = [
   }
 ];
 
-/*
-function isSearched(searchTerm) {
-  return function (item) {
-    return item.title.toLowerCase().includes(searchTerm.toLowerCase());
-  }
-}*/
-
 const isSearched = searchTerm => item =>
   item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -52,13 +45,6 @@ class App extends Component {
   }
 
   onDismiss(id) {
-    /*
-    function isNotId(item){
-      return item.objectID !== id;
-    }*/
-
-    // const updateList = this.state.list.filter(item => item.objectID !== id);
-
     const isNotId = item => item.objectID !== id;
     const updatedList = this.state.list.filter(isNotId);
     this.setState({ list: updatedList });
@@ -69,7 +55,6 @@ class App extends Component {
   }
 
   render() {
-    // Destructuring
     const { searchTerm, list } = this.state;
     return (
       <div className="App">
