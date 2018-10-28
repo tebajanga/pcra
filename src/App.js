@@ -61,15 +61,15 @@ const Button = ({ onClick, className = '', children,}) =>
   </button>
 
 const largeColumn = {
-  width:'40%',
+  width:'45%',
 };
 
 const midColumn = {
-  width:'30%',
+  width:'35%',
 };
 
 const smallColumn = {
-  width:'10%',
+  width:'15%',
 };
   
 class App extends Component {
